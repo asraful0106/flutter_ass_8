@@ -11,10 +11,9 @@ class App extends StatelessWidget {
       designSize: const Size(423, 828),
       minTextAdapt: true,
       splitScreenMode: true,
-
-      builder: (_, child) {
-        return MaterialApp(debugShowCheckedModeBanner: false, home: child);
-      },
+      ensureScreenSize:
+          true, 
+      builder: (context, child) => child!,
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routerConfig: AppRoutes.router,
